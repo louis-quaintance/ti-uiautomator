@@ -57,7 +57,7 @@ Grab your device's id, using the command adb devices. Lets say its 015d3b65d15c0
 Now run:
 
 ```
-./run.sh ZX1C22H2D6 5 HomeScreen "PACKAGENAME" "ACTIVITYTOLAUNCH"
+./run.sh 015d3b65d15c0802 5 HomeScreen "PACKAGENAME" "ACTIVITYTOLAUNCH"
 ```
 
 The first param is the device id<br/>
