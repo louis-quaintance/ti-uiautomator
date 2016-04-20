@@ -86,8 +86,8 @@ To keep the test run short, we tend to navigate back to the starting point in th
 
 ###Jenkins
 
-Jenkins can run the run.sh script after building to a device
-At the end of the tests, an exit code is set, 0 for Success, 1 for failure. This will cause the job to fail or succeed correctly
+Jenkins can run the run.sh script after building to a device<br/>
+At the end of the tests, an exit code is set, 0 for Success, 1 for failure.<br/>This will cause the job to fail or succeed correctly
 
 ###Adding new functional areas
 
