@@ -10,11 +10,25 @@ And also check out src/com/ti/uiautomator/FunctionalTestBase for common steps yo
 
 ###Setup Dev Env
 
-Download eclipse
+Download eclipse and Java
 
 Download ant, put it on your path
 
 Import this project
+
+###How does it work
+
+The framework reads the feature files and maps steps to Java methods. It looks in the sub class first e.g. HomePageTest.java and then the super class e.g. FunctionalTestBase.java
+
+```and the user takes screenshot "homepageOK"```
+
+will run
+
+```@StepAnnotation(regex = ".+ takes screenshot \".+\"")
+public void takesScreenshot(String screenshotId) throws IOException, InterruptedException {
+```
+
+
 
 ###How to run
 
