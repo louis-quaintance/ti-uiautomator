@@ -89,7 +89,7 @@ To keep the test run short, we tend to navigate back to the starting point in th
 
 ###Screen lock
 
-When running your tests with screen lock on, then you will need to ammend the method: removeLockScreenIfItsThere in FunctionalTestBase.java which currently has the passcode hardcoded
+When running your tests with screen lock on, then you will need to ammend the method: removeLockScreenIfItsThere in FunctionalTestBase.java which currently has the passcode hardcoded for my devices
 
 ###Jenkins
 
