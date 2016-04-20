@@ -86,6 +86,11 @@ At the end of the test, the script downloads the screenshots taken during the te
 
 To keep the test run short, we tend to navigate back to the starting point in the app after each scenario. This will avoid multiple restarts of the app, which can cause the tests to take too long
 
+
+###Screen lock
+
+When running your tests with screen lock on, then you will need to ammend the method: removeLockScreenIfItsThere in FunctionalTestBase.java which currently has the passcode hardcoded
+
 ###Jenkins
 
 Jenkins can run the run.sh script after building to a device<br/>

@@ -63,12 +63,12 @@ public abstract class FunctionalTestBase extends UiAutomatorTestCase {
                     try {
 
                         if (deviceDetails.isSwipeToRemoveLockScreen()) {
-                            new UiObject(new UiSelector().className("android.widget.TextView").text("0")).click();
+                            new UiObject(new UiSelector().className("android.widget.TextView").text("1")).click();
                             new UiObject(new UiSelector().className("android.widget.TextView").text("5")).click();
                             new UiObject(new UiSelector().className("android.widget.TextView").text("1")).click();
                             new UiObject(new UiSelector().className("android.widget.TextView").text("1")).click();
                         } else {
-                            new UiObject(new UiSelector().className("android.widget.Button").text("0")).click();
+                            new UiObject(new UiSelector().className("android.widget.Button").text("1")).click();
                             new UiObject(new UiSelector().className("android.widget.Button").text("5 JKL")).click();
                             new UiObject(new UiSelector().className("android.widget.Button").text("1")).click();
                             new UiObject(new UiSelector().className("android.widget.Button").text("1")).click();
