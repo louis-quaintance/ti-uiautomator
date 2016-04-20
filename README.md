@@ -24,7 +24,7 @@ The framework reads the feature files and maps steps to Java methods. It looks i
 and the user takes screenshot "homepageOK"
 ```
 
-will run:
+in the feature file will run:
 
 ```
 @StepAnnotation(regex = ".+ takes screenshot \".+\"")
