@@ -32,7 +32,23 @@ public void takesScreenshot(String screenshotId) throws IOException, Interrupted
 ```
 
 See from the regex how you could put anything before the text 'takes screenshot "home"'
+e.g. When the user takes screenshot, Then the user takes screenshot etc etc
 
+###Common steps
+
+```
+... scrolls down
+... scrolls up
+... sleeps for "5" seconds
+... dismisses alert by clicking on the "OK" button
+... they see alert "Hello"
+... clicks on the device back button
+... can see text "Welcome" on screen
+... clicks on view with id "ID"
+... clears the field with id "ID"
+```
+
+For any more see FunctionalTestBase.java, if you wish to develop steps unique to the functional area of your app that you're testing then place the methods in your subclass e.g. HomeScreenTest.java
 
 ###How to run
 
@@ -42,13 +58,21 @@ Now run:
 
 ./run.sh ZX1C22H2D6 5 HomeScreen "PACKAGENAME" "ACTIVITYTOLAUNCH"
 
-The first param is the device id
-The second param is the number of seconds you wish to give the app to load up
-The third param is the functional area e.g. HomeScreen, Login (note this maps to a Test class in package com.ti.uiautomator
+The first param is the device id<br/>
+The second param is the number of seconds you wish to give the app to load up<br/>
+The third param is the functional area e.g. HomeScreen, Login (note this maps to a Test class in package com.ti.uiautomator<br/>
 
 To add a device to test, create a folder named by device id in deviceConfig, inside it create a file called bddConfig.properties and copy and ammend the settings from the other files
 
-This is a custom BDD framework which is very similar to Cucumber, see example feature file in the features folder. The logic for it can be found in src/to/uiautomator/bdd. It uses reflection to look for annotations, first in subclass then in the FunctionalTestBase.java which contains the common operations you might wish to use.
+An example might be:
+```
+isTablet=true
+tags=@both,@phone
+deviceName=MotoG
+swipeToRemoveLockScreen=true
+```
+
+This is a custom BDD framework which is very similar to Cucumber, see example feature file in the features folder. The logic for it can be found in src/to/uiautomator/bdd. It uses reflection to look for annotations, first in the specific subclass then in the FunctionalTestBase.java which contains the common operations you might wish to use.
 
 You can add comments using the # symbol in your feature files
 
@@ -65,9 +89,9 @@ At the end of the tests, an exit code is set, 0 for Success, 1 for failure. This
 
 ###Adding new functional areas
 
-Create a new class in package com.ti.uiautomator using the following naming convention FunctionalAreaNameTest.java e.g. LoginTest
+Create a new class in package com.ti.uiautomator using the following naming convention FunctionalAreaNameTest.java e.g. HomeScreenTest
 
-This class must override the setUp() and implement runTests() calling super.runTests() in process, see LoginTest.java for example
+This class must override the setUp() and implement runTests() calling super.runTests() in process, see HomeScreenTest.java for example
 
 Then write your features in the features folder e.g. if you were adding AppSettingsAreaTest.java create a feature file named appsettingsarea.feature (note lower case)
 
