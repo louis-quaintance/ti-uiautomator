@@ -20,9 +20,14 @@ Import this project
 
 The framework reads the feature files and maps steps to Java methods. It looks in the sub class first e.g. HomePageTest.java and then the super class e.g. FunctionalTestBase.java
 
-```and the user takes screenshot "homepageOK"```
+```
+and the user takes screenshot "homepageOK"
+```
 
-runs
+
+```
+public void takesScreenshot(String screenshotId) throws IOException, InterruptedException {
+```
 
 
 
