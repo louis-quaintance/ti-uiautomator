@@ -34,6 +34,8 @@ public void takesScreenshot(String screenshotId) throws IOException, Interrupted
 See from the regex how you could put anything before the text 'takes screenshot "home"'
 e.g. When the user takes screenshot, Then the user takes screenshot etc etc
 
+The run script bundles up the tests, transfers them onto the device and runs them there.
+
 ###Common steps
 
 ```
