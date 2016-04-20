@@ -1,12 +1,12 @@
 ##Ti-uiautomator
 
-Ever wanted to write functional tests for Android apps written natively using Java or Titanium, look no further.
+Ever wanted to write functional tests for Android apps written natively using Java or Titanium? Well look no further.
 
 This project was written after finding Calabash and Appium to be very unstable. The answer is to go native for each mobile platform.
 
 Check out the features folder for how to write cucumber like steps.
 
-And also check out src/com/ti/uiautomator/FunctionalTestBase for common steps you can use. The Java annotations contain regexes which the framework uses to match to the steps in the feature files.
+And also check out src/com/ti/uiautomator/FunctionalTestBase for common steps you can use. The Java annotations contain regexes which the framework uses to match to the steps in the feature files. It uses the Java Reflection API
 
 ###Setup Dev Env
 
@@ -97,7 +97,11 @@ This class must override the setUp() and implement runTests() calling super.runT
 
 Then write your features in the features folder e.g. if you were adding AppSettingsAreaTest.java create a feature file named appsettingsarea.feature (note lower case)
 
-You can now run the tests by executing command: ./run.sh 015d3b65d15c0802 8 AppSettings "PACKAGENAME" "ACTIVITYTOLAUNCH"
+You can now run the tests by executing command:
+
+```
+./run.sh 015d3b65d15c0802 8 AppSettings "PACKAGENAME" "ACTIVITYTOLAUNCH"
+```
 
 ###uiautomator viewer
 
@@ -110,3 +114,7 @@ Note Appcelerator always adds a '.' on the end of an accessibility label. For ex
 ```
 
 Will need to be located in the feature file using a step like so: .... enters "jeffhaynie" into field with id "username."
+
+###Special thanks
+
+Goes to Peter Lancaster for bearing with my initial attempt at this and making it more robust with me
