@@ -22,8 +22,6 @@ The framework reads the feature files and maps steps to Java methods. It looks i
 
 ```and the user takes screenshot "homepageOK"```
 
-will run
-
 ```@StepAnnotation(regex = ".+ takes screenshot \".+\"")
 public void takesScreenshot(String screenshotId) throws IOException, InterruptedException {
 ```
