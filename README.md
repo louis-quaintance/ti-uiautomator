@@ -117,4 +117,4 @@ Will need to be located in the feature file using a step like so: .... enters "j
 
 ###Special thanks
 
-Goes to Peter Lancaster for bearing with my initial attempt at this and making it more robust with me
+Goes to Peter Lancaster for bearing with my initial attempt at this way back when and making it more robust with me
