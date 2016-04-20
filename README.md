@@ -93,7 +93,7 @@ At the end of the tests, an exit code is set, 0 for Success, 1 for failure.<br/>
 
 Create a new class in package com.ti.uiautomator using the following naming convention FunctionalAreaNameTest.java e.g. HomeScreenTest
 
-This class must override the setUp() and implement runTests() calling super.runTests() in process, see HomeScreenTest.java for example
+This class must override the setUp() and implement runTests() calling super.runTests() in the process, see HomeScreenTest.java for example
 
 Then write your features in the features folder e.g. if you were adding AppSettingsAreaTest.java create a feature file named appsettingsarea.feature (note lower case)
 
